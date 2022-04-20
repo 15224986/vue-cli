@@ -1,0 +1,479 @@
+@charset "utf-8";
+
+// **************************** reset 引入重置样式 **********************************
+@import 'components/reset';
+
+// **************************** scrollbar 导航相关的样式 **********************************
+@import 'components/scrollbar';
+
+// **************************** icons 自定义图标 **********************************
+@import 'components/icons';
+
+// **************************** btn 文字按钮样式 **********************************
+@import 'components/btn';
+
+// **************************** moc-checkbox 多选相关样式 **********************************
+@import 'components/checkbox';
+
+// **************************** radio 单选样式 **********************************
+@import 'components/radio';
+
+// **************************** moc-dialog 提示框样式 **********************************
+@import 'components/dialog';
+
+// **************************** loading 加载中样式 **********************************
+@import 'components/loading';
+
+// **************************** select 下拉框样式 **********************************
+@import 'components/select';
+
+// **************************** tabs 选项卡样式 **********************************
+@import 'components/tabs';
+
+// **************************** toartr 提示框样式 **********************************
+@import 'components/toartr';
+
+// **************************** smart-menu 右键导航 **********************************
+@import 'components/smart-menu';
+
+// **************************** tags-view 多页显示标签 **********************************
+@import 'components/tags-view';
+
+// **************************** orgchart 组织架构图 **********************************
+@import 'components/orgchart';
+
+// **************************** anchor 锚点 **********************************
+@import 'components/anchor';
+
+// **************************** Split 面板分割 **********************************
+@import 'components/split';
+
+// **************************** Split 穿梭框 **********************************
+@import 'components/transfer';
+
+// **************************** highlightjs 代码高亮 **********************************
+@import 'components/highlightjs';
+
+
+
+
+
+// **************************** project 页面框架 **********************************
+@import 'components/project';
+
+
+// **************************** Affix 图钉 **********************************
+.moc-affix {
+    position: fixed;
+    z-index: 10
+}
+
+
+
+
+
+
+
+
+// **************************** Selectable 选择 **********************************
+.moc-selectable-item{
+	list-style: none;
+	padding: 5px 10px;
+	line-height: 20px;
+	user-select: none;
+	&.is-active{
+		color: #FFFFFF;
+		background-color: $dropdown-active-color;
+	}
+	&.is-disabled{
+		background-color: $toggle-bg-cpolor;
+		cursor: not-allowed;
+	}
+}
+// 案例
+.selectable-dom{
+	border: 1px solid black;
+	height: 360px;
+	overflow: auto;
+	.moc-selectable-item{
+		+ .moc-selectable-item{
+			border-top: 1px solid black;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.section{
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+
+// **************************** api  **********************************
+.api{
+	margin-top: 50px;
+	h2,
+	p {
+		padding: 0 0 10px;
+	}
+	h2{
+		color: #333333;
+	}
+	table {
+		font-family: Consolas,Menlo,Courier,monospace;
+		font-size: 12px;
+		border-collapse: collapse;
+		border-spacing: 0;
+		empty-cells: show;
+		border: 1px solid #e9e9e9;
+		width: 100%;
+		margin-bottom: 24px
+	}
+	table th {
+		background: #f7f7f7;
+		white-space: nowrap;
+		color: #5c6b77;
+		font-weight: 600
+	}
+	table td,
+	table th {
+		border: 1px solid #e9e9e9;
+		padding: 8px 16px;
+		text-align: left
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **************************** echarts 数据图表相关 **********************************
+.echarts-item{
+	width:100%;
+	height:400px;
+}
+
+// **************************** form 表单相关 **********************************
+.moc-form-label-static{
+	padding: 0 10px;
+}
+.form-section{
+	padding: 30px;
+	background-color: #fff;
+}
+.form-details{
+	.el-form-item{
+		margin-bottom: 0;
+	}
+	.form-btns{
+		margin-top: 20px;
+		margin-bottom: 22px;
+	}
+}
+
+// **************************** pagination 分页器 **********************************
+.pagination-box {
+	padding: 30px 0;
+	text-align: center;
+	background-color: #fff;
+}
+.table-box+.pagination-box {
+	border: 1px solid #EBEEF5;
+	border-top: 0 none;
+}
+
+// **************************** login 页面样式 *********************************
+.login-container {
+    /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin: 180px auto;
+    width: 350px;
+    padding: 35px 35px 15px 35px;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 0 25px #cac6c6;
+    .title {
+        margin: 0px auto 40px auto;
+        text-align: center;
+        color: #505458;
+    }
+
+    .remember {
+        margin: 0px 0px 35px 0px;
+    }
+}
+
+
+// **************************** svg-icons 图标展示 **********************************
+.section-svg-icons{
+	@include clearfix;
+	padding-left: 1px;
+	li{
+		width: 25%;
+		line-height: 40px;
+		float: left;
+		border: #CCCCCC 1px solid;
+		margin-left: -1px;
+		margin-top: -1px;
+		box-sizing: border-box;
+		padding-left: 16px;
+		>span{
+			margin-left: 6px;
+		}
+	}
+	
+}
+
+
+// **************************** 组件页面的样式 **********************************
+.widget{
+	padding: 20px;
+	.widget-title,
+	.widget-tit{
+		color: #333;
+		margin-bottom: 10px;
+	}
+	.widget-txt{
+		margin-bottom: 6px;
+	}
+	>.section{
+		margin-bottom: 50px;
+	}
+	.widget-box{
+		margin-bottom: 20px;
+	}
+	.widget-demo{
+		margin-bottom: 10px;
+	}
+	.widget-dl{
+		dt{
+			color: #333;
+			font-size: 16px;
+			font-weight: 700;
+			margin-bottom: 6px;
+		}
+		dd + dt{
+			margin-top: 16px;
+		}
+		dd{
+			.label{
+				display: inline-block;
+				width: 100px;
+				text-align: right;
+				color: #333;
+				font-weight: 700;
+			}
+		}
+	}
+}
+.static{
+	.static-icon-camera{
+		display: inline-block;
+		width: 32px;
+		height: 34px;
+		background-image: url(~@/assets/images/icon-camera.png)
+	}
+	.diagram-map-train{
+		display: inline-block;
+		width: 50px;
+		height: 22px;
+		background-image: url(~@/assets/images/diagram-map-train.png)
+	}
+	.login-body-2{
+		display: inline-block;
+		width: 526px;
+		height: 124px;
+		background-image: url(~@/assets/images/login-body_02.png)
+	}
+	.echarts-pie-bg{
+		display: inline-block;
+		width: 149px;
+		height: 168px;
+		background-image: url(~@/assets/images/echarts-pie-bg.png)
+	}
+	.login-logo{
+		display: inline-block;
+		width: 894px;
+		height: 157px;
+		background-image: url(~@/assets/images/login-logo.png)
+	}
+	.logo{
+		display: inline-block;
+		width: 510px;
+		height: 82px;
+		background-image: url(~@/assets/images/logo.png)
+	}
+}
+.public{
+	.icon-camera{
+		display: inline-block;
+		width: 32px;
+		height: 34px;
+		background-image: url("/static/images/icon-camera.png")
+	}
+	.diagram-map-train{
+		display: inline-block;
+		width: 50px;
+		height: 22px;
+		background-image: url("/static/images/diagram-map-train.png")
+	}
+}
+
+/**
+ * 样例页面样式
+ */
+#wrapper{
+	background-color: transparent;
+}
+.section-breadcrumb{
+	margin-bottom: 20px;
+}
+.section + .section{
+	margin-top: 20px;
+}
+.section-title {
+	padding: 0 0 10px;
+}
+.section-subhead{
+	padding-bottom: 16px;
+	line-height: 26px;
+	dt{
+		line-height: 30px;
+		font-weight: 700;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
+.section-title + .section-subhead{
+	margin-top: -6px;
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ * 查看更多 组件样式
+ */
+.moc-more-panel{
+	padding: 20px;
+	position: relative;
+	border: #CCCCCC 1px solid;
+}
+.moc-more-panel-tools{
+	float: right;
+	margin-left: 10px;
+}
+.more-panel-body{
+	overflow: hidden;
+}
+.more-panel-toggle{
+	width: 44px;
+	position: absolute;
+	left: 50%;
+	bottom: -1px;
+	border: #CCCCCC 1px solid;
+	margin-left: -23px;
+	text-align: center;
+	line-height: 16px;
+	cursor: pointer;
+	user-select: none;
+	&:hover{
+		background-color: $nav-bg-hover-color;
+	}
+}
+
+/**
+ * 表格搜索样式
+ */
+.moc-table-search{
+	.el-form-item--mini.el-form-item{
+		margin-bottom: 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// **************************** 预留位置 **********************************
+%clearfix {
+    @include clearfix;
+}
+%block{
+    display: block;
+}
+
+
+
+// **************************** helpers 辅助类 **********************************
+@import 'components/helpers';
+
+

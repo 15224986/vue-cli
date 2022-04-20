@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+// **************************** page 页面框架 **********************************
+.body-bg-default{
+	background-color: #f1f1f1;
+}
+#page-container{
+	position: relative;
+}
+$headerHight: 60px;
+#page-header{
+	width: 100%;
+	height: $headerHight;
+	position: fixed;
+	left: 0;
+	top: 0;
+	border-bottom: solid 1px #e6e6e6;
+	z-index: 90;
+	background-color: #fff;
+	.logo{
+		float: left;
+		line-height: $headerHight;
+		padding: 0 30px;
+		font-size: 24px;
+	}
+	.nav{
+		float: left;
+		margin-left: 36px;
+		li{
+			float: left;
+			a{
+				display: block;
+				color: #333;
+				line-height: $headerHight;
+				border-bottom: rgba(0,0,0, 0) 1px solid;
+				padding: 0 20px;
+				&.active{
+					color: #409EFF;
+					border-bottom-color: #409EFF;
+				}
+			}
+		}
+	}
+	.user{
+		float: right;
+		line-height: 30px;
+		margin-top: 15px;
+		.btn-text,
+		.el-dropdown{
+			margin-right: 20px;
+		}
+		.userinfo-inner{
+			cursor: pointer;
+			display: inline-block;
+			&:hover{
+				color: #409EFF;
+			}
+			img{
+				width: 30px;
+			    height: 30px;
+			    border-radius: 50%;
+			    vertical-align: top;
+			}
+		} 
+	}
+}
+#sidebar{
+	width: 250px;
+    position: fixed;
+    left: 0;
+    top: $headerHight + 1px;
+    bottom: 0;
+	border-right: solid 1px #e6e6e6;
+	background-color: #fff;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	.el-menu{
+		height: calc(100% - 35px);
+		overflow: auto;
+		border-right: 0 none;
+	}
+	.neu-menu-tools{
+		height: 30px;
+		position: relative;
+	}
+	.hamburger{
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		cursor: pointer;
+		&.neu-active {
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	}
+    + #content{
+    	margin-left: 250px;
+    }
+}
+#page-bodier{
+	padding-top: 1px;
+	margin-top: -1px;
+}
+#content{
+	margin-top: $headerHight + 1px;
+	padding: 20px;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+.neu-sidebar-opened{
+	#sidebar{
+		width: 64px;
+	    + #content{
+	    	margin-left: 64px;
+	    }
+	}
+}
+
+
+/*
+ * 去除左道航
+ */
+.sidebar-hide{
+    #sidebar{
+        display: none;
+        + #content{
+            margin-left: 0;
+        }
+    }
+}
+/*
+ * 去除顶部道航
+ */
+.header-hide{
+    #page-header{
+        display: none;
+    }
+    #sidebar{
+        top: 0;
+    }
+    #content{
+        margin-top: 0;
+    }
+}
+// 结束
+
+

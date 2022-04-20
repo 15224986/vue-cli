@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+// **************************** moc-dialog 提示框样式 **********************************
+.moc-dialog-cover {
+    background: #000;
+    opacity: 0.3;
+    position: fixed;
+    z-index: 980;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.moc-dialog-content{
+    width: 440px;
+    position: fixed;
+    overflow: auto;
+    background: #fff;
+    z-index: 990;
+    line-height: 1.6;
+    border-radius: 4px;
+    padding-bottom: 10px;
+    &.dialog-center{
+        left: 50%;
+        top: 50%;
+        margin-left: -220px;
+        margin-top: -85px;
+    }
+    &.dialog-left{
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &.dialog-top{
+        left: 50%;
+        top: 200px;
+        margin-left: -220px;
+    }
+    &.dialog-bottom{
+        left: 50%;
+        bottom: 80px;
+        margin-left: -220px;
+    }
+    &.dialog-right{
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+    
+.moc-dialog-head{
+    overflow: hidden;
+}
+.moc-dialog-title{
+    float: left;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #303133;
+    line-height: 43px;
+}
+.moc-dialog-close{
+    float: right;
+    padding: 8px 10px;
+    margin-right: 4px;
+    margin-top: 2px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+    opacity: .2;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+.moc-dialog-body{
+    padding: 10px 20px;
+    text-align:left;
+    font-size:14px;
+    color:#606266
+}
+.moc-dialog-input{
+    padding-top: 8px;
+    input{
+        height: 38px;
+        width: 100%;
+        box-sizing: border-box;
+        border: #ccc 1px solid;
+        padding: 0 15px;
+        line-height: 38px;
+
+        &:focus{
+            border-color: #409eff;
+        }
+    }
+}
+
+.moc-dialog-foot {
+    padding: 15px 15px 0;
+    text-align: right;
+}
+.moc-dialog-ensure,
+.moc-dialog-cancle {
+    display: inline-block;
+    padding: 0 24px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 3px;
+    color: #606266;
+    line-height: 34px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #dcdfe6;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.moc-dialog-cancle:focus,
+.moc-dialog-cancle:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+.moc-dialog-ensure {
+    margin-left: 10px;
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+.moc-dialog-ensure:focus,
+.moc-dialog-ensure:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+}
+
+/**
+ * 动画效果
+ */
+
+// 过渡的过程时间，延迟和曲线函数。
+.moc-dialog-enter-active,
+.moc-dialog-leave-active {
+  transition: 0.4s ease-out;
+}
+// 开始位置
+.moc-dialog-enter,
+.moc-dialog-leave-to {
+    opacity: 0;
+    transform: translateY(-600px);
+}
+// 结束位置
+.moc-dialog-leave,
+.moc-dialog-enter-to{
+    opacity: 1;
+    transform: translateY(0);
+}
+// 结束
+
+

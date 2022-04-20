@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+// **************************** highlightjs 代码高亮 **********************************
+.moc-highlight{
+	position: relative;
+	@include clearfix;
+	background: #23241f;
+	border-radius: 6px;
+	padding: 46px 14px 14px 14px;
+	color: #AAAAAA;
+	font-size: 14px;
+	pre{
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		code.hljs{
+			float: left;
+			margin: 0;
+			padding: 0 0 0 14px;
+			background: transparent;
+			font-family: monospace;
+			font-size: 14px;
+			line-height: normal;
+		}
+	}
+}
+.moc-highlight-icons{
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	li{
+		width: 14px;
+		height: 14px;
+		float: left;
+		margin-right: 8px;
+		background-color: #ff5f56;
+		border-radius: 50%;
+		&:nth-child(2){
+			background-color: #ffbd2e;
+		}
+		&:nth-child(3){
+			background-color: #27c93f;
+		}
+	}
+}
+.moc-highlight-index{
+	float: left;
+	text-align: right;
+	li{
+		font-family: monospace;
+		user-select: none;
+	}
+}
+
+.moc-highlight-lang,
+.moc-highlight-copy{
+	position: absolute;
+	top: 14px;
+	line-height: 24px;
+}
+.moc-highlight-copy{
+	padding: 0 14px 1px;
+	right: 16px;
+	border-radius: 4px;
+	user-select: none;
+	cursor: pointer;
+	&:hover{
+		background-color: #555555;
+	}
+}
+.moc-highlight-lang{
+	right: 120px;
+	text-transform: Uppercase;
+	&::after{
+		content: '';
+		width: 1px;
+		height: 14px;
+		background-color: #555555;
+		position: absolute;
+		right: -16px;
+		top: 6px;
+	}
+}

@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+// **************************** orgchart 组织架构图 样式修改 **********************************
+.orgchart-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	text-align: center;
+}
+.orgchart {
+	box-sizing: border-box;
+	display: inline-block;
+	min-height: 202px;
+	min-width: 202px;
+	&.orgchart-pan{
+		cursor: move;
+		.node{
+			cursor: default;
+		}
+	}
+	table {
+		border-spacing: 0;
+		border-collapse: separate;
+		td {
+			text-align: center;
+			vertical-align: top;
+			padding: 0;
+		}
+	}
+	.lines{
+		&:nth-child(3) td {
+			box-sizing: border-box;
+			height: 20px;
+		}
+		.topLine {
+			border-top: 2px solid rgba(217, 83, 79, 0.8);
+		}
+		.rightLine {
+			border-right: 1px solid rgba(217, 83, 79, 0.8);
+			float: none;
+			border-radius: 0;
+		}
+		.leftLine {
+			border-left: 1px solid rgba(217, 83, 79, 0.8);
+			float: none;
+			border-radius: 0;
+		}
+		.downLine {
+			background-color: rgba(217, 83, 79, 0.8);
+			margin: 0 auto;
+			height: 20px;
+			width: 2px;
+			float: none;
+		}
+	}
+	.node {
+		box-sizing: border-box;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		width: 130px;
+		padding: 2px;
+		margin: 0 4px;
+		border: transparent 1px dashed;
+		-webkit-user-select:none;
+		-moz-user-select:none;
+		-ms-user-select:none;
+		user-select:none;
+		&:hover {
+			.delete-btn{
+				display: block;
+			}
+		}
+		&.node-is-ging{
+			border-color: #ff0000;
+		}
+		&.node-is-over{
+			border-color: #0fb2ee;
+		}
+		.title {
+			background-color: rgba(217, 83, 79, 0.8);
+			border-radius: 4px 4px 0 0;
+			color: #fff;
+			text-align: center;
+			line-height: 28px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.content {
+			box-sizing: border-box;
+			width: 100%;
+			background-color: #fff;
+			border: 1px solid rgba(217, 83, 79, 0.8);
+			border-radius: 0 0 4px 4px;
+			color: #333;
+			font-size: 11px;
+			line-height: 26px;
+			text-align: center;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.delete-btn{
+			width: 12px;
+			height: 12px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 99;
+			background-color: blue;
+			display: none;
+		}
+	}
+}
+
+.l2r {
+	text-align: left;
+	.orgchart{
+		min-width: 20px;
+		margin-top: 0;
+		padding-top: 20px;
+		position: absolute;
+		top: 50%;
+		transform: rotate(-90deg) rotateY(180deg) translate( -50%, 0);
+		transform-origin: left top;
+	}
+	.node{
+	  	width: 28px;
+	  	height: 140px;
+	  	&.slide-down {
+		  	transform: translateY(130px);
+		}
+		&.slide-up {
+			transform: translateY(-130px);
+		}
+		&.slide-right {
+			transform: translateX(40px);
+		}
+		&.slide-left {
+			transform: translateX(-40px);
+		}
+	  	.title {
+	  		width: 140px;
+	  		height: 28px;
+		  	transform: rotate(-90deg) translate(-39px, -45px) rotateY(180deg);
+		  	transform-origin: bottom center;
+		}
+		.content {
+			width: 140px;
+	  		height: 28px;
+		  	transform: rotate(-90deg) translate(-39px, -45px) rotateY(180deg);
+		  	transform-origin: top center;
+		}
+	}
+}
+.r2l {
+	text-align: left;
+	.orgchart{
+		min-width: 20px;
+		margin-top: 0;
+		padding-bottom: 20px;
+		position: absolute;
+		top: 50%;
+		transform: rotate(90deg) translate( -50%, -100%);
+	  	transform-origin: left top;
+	}
+ 	.node {
+	  	width: 28px;
+	  	height: 140px;
+	  	&.slide-down {
+		  	transform: translateY(130px);
+		}
+		&.slide-up {
+			transform: translateY(-130px);
+		}
+		&.slide-right {
+			transform: translateX(40px);
+		}
+		&.slide-left {
+			transform: translateX(-40px);
+		}
+	  	.title {
+	  		width: 140px;
+	  		height: 28px;
+		  	transform: rotate(-90deg) translate(-39px, -45px);
+  			transform-origin: bottom center;
+		}
+		.content {
+			width: 140px;
+	  		height: 28px;
+		  	transform: rotate(-90deg) translate(-39px, -45px);
+			transform-origin: top center;
+		}
+	} 
+}

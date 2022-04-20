@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// **************************** smart-menu 右键导航 **********************************
+.moc-smart-menu{
+    position:fixed;
+    z-index: 9999;
+    background-color: #ffffff;
+    border: 1px solid #B8CBCB;
+    padding: 4px 2px;
+    background-color: #fff;
+    -moz-box-shadow: 2px 2px 5px #666;
+    -webkit-box-shadow: 2px 2px 5px #666;
+    box-shadow: 2px 2px 5px #666;
+}
+.moc-smart-menu-item{
+    white-space:nowrap;
+    line-height: 30px;
+    padding: 0 20px;
+    cursor: pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    &:hover{
+        color: #ffffff;
+        background-color: #409EFF;
+    }
+}
+// 结束
+
+
